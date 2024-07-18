@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Task Detail">
+        <template if:true={task}>
+            <p><strong>Name:</strong> {task.Name}</p>
+            <p><strong>Description:</strong> {task.Description__c}</p>
+            <p><strong>Status:</strong> {task.Status__c}</p>
+            <p><strong>Due Date:</strong> {task.Due_Date__c}</p>
+            <lightning-button label="Edit" onclick={handleEdit}></lightning-button>
+            <lightning-button label="Delete" onclick={handleDelete}></lightning-button>
+        </template>
+    </lightning-card>
+</template>

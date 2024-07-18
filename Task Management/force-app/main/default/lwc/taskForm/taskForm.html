@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Task Form">
+        <lightning-input label="Task Name" value={task.Name} onchange={handleChange} data-field="Name"></lightning-input>
+        <lightning-textarea label="Description" value={task.Description__c} onchange={handleChange} data-field="Description__c"></lightning-textarea>
+        <lightning-combobox label="Status" value={task.Status__c} options={statusOptions} onchange={handleChange} data-field="Status__c"></lightning-combobox>
+        <lightning-input type="date" label="Due Date" value={task.Due_Date__c} onchange={handleChange} data-field="Due_Date__c"></lightning-input>
+        <lightning-button label="Save" onclick={handleSave}></lightning-button>
+    </lightning-card>
+</template>
+
+

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Task List">
+        <lightning-button label="New Task" onclick={handleNewTask}></lightning-button>
+        <template if:true={tasks}>
+            <ul>
+                <template for:each={tasks} for:item="task">
+                    <li key={task.Id} onclick={handleTaskClick} data-id={task.Id}>
+                        {task.Name}
+                    </li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>

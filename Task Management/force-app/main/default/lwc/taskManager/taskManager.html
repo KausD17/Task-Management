@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="4">
+            <c-task-list ontaskselect={handleTaskSelect} onnewtask={handleNewTask}></c-task-list>
+        </lightning-layout-item>
+        <lightning-layout-item size="4">
+            <template if:true={selectedTask}>
+                <c-task-detail task={selectedTask} onedittask={handleEditTask} ondeletetask={handleDeleteTask}></c-task-detail>
+            </template>
+        </lightning-layout-item>
+        <lightning-layout-item size="4">
+            <template if:true={showTaskForm}>
+                <c-task-form task={selectedTask} ontaskcreate={handleTaskCreate} ontaskupdate={handleTaskUpdate}></c-task-form>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
